@@ -55,3 +55,6 @@ artifacts/
 *.generated.cs
 *.runtimeconfig.json
 *.deps.json
+
+# Ds Store files
+.DS_Store
