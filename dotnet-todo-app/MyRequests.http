@@ -1,0 +1,54 @@
+### Get root
+GET http://localhost:5116/
+
+### Get all todos
+GET http://localhost:5116/todos
+
+### Create a new todo
+POST http://localhost:5116/todos
+Content-Type: application/json
+
+{
+  "id": 7,
+  "name": "Learn azure pipelines",
+  "dueDate": "2023-12-31T00:00:00",
+  "isCompleted": false
+}
+
+### Get a specific todo
+GET http://localhost:5116/todos/2
+
+### Update a todo with put
+PUT http://localhost:5116/todos/3
+Content-Type: application/json
+
+{
+  "id": 8,
+  "name": "Learn azure pipelines 3",
+  "dueDate": "2023-12-31T00:00:00",
+  "isCompleted": false
+}
+
+### Update a todo with patch
+PATCH http://localhost:5116/todos/3
+Content-Type: application/json
+
+{
+  "name": "Learn azure pipelines 2"
+}
+
+
+### Delete a todo
+DELETE http://localhost:5116/todos/4
+
+### Get completed todos
+GET http://localhost:5116/todos/isCompleted?isCompleted=true
+
+### Get first page of todos
+GET http://localhost:5116/todos/page/1
+
+### Filter todos by completion status (using query parameter)
+GET http://localhost:5116/todos?isCompleted=true
+
+### Get paginated todos (using query parameter)
+GET http://localhost:5116/todos?pageNumber=1&pageSize=5
